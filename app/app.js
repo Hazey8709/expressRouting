@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 //! Routes Imports
-
+const router = require("../routes/curlRoutes");
 //
 //
 //
@@ -37,8 +37,7 @@ app.get("/", (req, res) => {
 });
 
 //! Routes
-// app.use("/ "  ),
-// app.use("/ "  ),
+app.use("/curl", router);
 // app.use("/ "  ),
 
 //! Error Handling
