@@ -47,7 +47,7 @@ const update = (id, product) => {
         return product;
     });
 
-    return products;
+    return product;
 };
 
 //* Delete product by id

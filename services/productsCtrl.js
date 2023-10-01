@@ -22,6 +22,7 @@ const form = (req, res) => {
 const show = (req, res) => {
     const product = productsModel.find(req.params.id);
     res.json(product);
+    // res.send(`Product ${req.params.id}`);
 
     console.log("Show-Log: productsModel.find - Get By Id");
 };
