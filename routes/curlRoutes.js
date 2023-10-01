@@ -4,8 +4,12 @@ const router = express.Router();
 //! Get All
 //* http://www.localhost:4000/curl/
 router.get("/", (req, res) => {
-    res.send(`Product Page`);
-    console.log("GET-ALL");
+    res.send({
+        page: 2,
+        Sort: "Price",
+        Order: "desc",
+    });
+    console.log("GET-ALL: curl Route");
 });
 
 //* http://www.localhost:4000/curl/:id/:query
@@ -24,7 +28,7 @@ router.get("/:id/:page/:query", (req, res) => {
             query: query,
         },
     });
-    console.log("GET By: Id, Page, Query");
+    console.log("GET By: Id, Page, Query: curl Route");
 });
 
 module.exports = router;

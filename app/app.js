@@ -3,7 +3,7 @@ const app = express();
 
 //! Routes Imports
 const curlRoutes = require("../routes/curlRoutes");
-// const productRoutes = require("../routes/productsRoutes");
+const productRoutes = require("../routes/productsRoutes");
 //
 //
 //
@@ -42,7 +42,7 @@ app.get("/", (req, res) => {
 app.use("/curl", curlRoutes);
 
 //* http://localhost:4000/products
-// app.use("/products ", productRoutes);
+app.use("/products", productRoutes.router);
 
 //! Error Handling
 app.use((req, res, next) => {
