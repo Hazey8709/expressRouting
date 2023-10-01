@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 
 //! Routes Imports
-// const router = require("../routes/curlRoutes");
+const curlRoutes = require("../routes/curlRoutes");
+const productRoutes = require("../routes/productsRoutes");
 //
 //
 //
@@ -37,8 +38,11 @@ app.get("/", (req, res) => {
 });
 
 //! Routes
-// app.use("/curl", router);
-// app.use("/ "  ),
+//* http://localhost:4000/curl
+app.use("/curl", curlRoutes);
+
+//* http://localhost:4000/products
+app.use("/products", productRoutes.router);
 
 //! Error Handling
 app.use((req, res, next) => {

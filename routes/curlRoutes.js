@@ -4,29 +4,31 @@ const router = express.Router();
 //! Get All
 //* http://www.localhost:4000/curl/
 router.get("/", (req, res) => {
-    res.status(200).json({
+    res.send({
+        page: 2,
+        Sort: "Price",
+        Order: "desc",
+    });
+    console.log("GET-ALL: curl Route");
+});
+
+//* http://www.localhost:4000/curl/:id/:query
+router.get("/:id/:page/:query", (req, res) => {
+    const id = req.params.id;
+    const page = req.params.page;
+    const query = req.params.query;
+
+    res.send({
         message: "successful - get",
         metadata: {
             hostname: req.hostname,
             method: req.method,
+            id: id,
+            page: page,
+            query: query,
         },
     });
-    console.log("GET-ALL");
+    console.log("GET By: Id, Page, Query: curl Route");
 });
 
-// //* http://www.localhost:4000/curlRoutes/:id/:query
-// router.get("/:id/:query", (req, res) => {
-//     const id = req.params.id;
-//     const query = req.query;
-
-//     res.status(200).json({
-//         message: "successful - get",
-//         metadata: {
-//             hostname: req.hostname,
-//             method: req.method,
-//             id: id,
-//             query: query,
-//         },
-//     });
-//     console.log("GET");
-// });
+module.exports = router;
