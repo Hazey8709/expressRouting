@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+// const bodyParser = require("body-parser");
 
 //! Routes Imports
 const curlRoutes = require("../routes/curlRoutes");
@@ -11,6 +12,7 @@ const productRoutes = require("../routes/productsRoutes");
 //! Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 
 //! CORS
 app.use((req, res, next) => {
