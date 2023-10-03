@@ -24,36 +24,46 @@ let products = [
 
 //* Get all products
 const all = () => {
+    console.log("models/products.js - all()");
     return products;
 };
 
 //* Create product
 const create = (product) => {
     products.push(product);
+
+    console.log("models/products.js - create()");
     return products;
 };
 
 //* Find product by id
 const find = (id) => {
+    console.log("models/products.js - find()");
+
+    id = parseInt(id, 10);
+
     return products.find((product) => product.id === id);
 };
 
 //* Update product by id
-const update = (id, product) => {
-    products.map((product) => {
+const update = (id, updatedProduct) => {
+    products.forEach((product) => {
         if (product.id === id) {
-            product = { ...product, ...product };
+            Object.assign(product, updatedProduct);
+            console.log(
+                "models/products.js - update()-- Inside ForEach Function"
+            );
         }
-        return product;
     });
-
-    return product;
+    console.log("models/products.js - update()-- Outside ForEach function");
+    return products;
 };
 
 //* Delete product by id
 const destroy = (id) => {
-    products.filter((product) => product.id !== id);
+    products = products.filter((product) => product.id !== id);
 
+    console.log("models/products.js - destroy()");
     return products;
 };
 
