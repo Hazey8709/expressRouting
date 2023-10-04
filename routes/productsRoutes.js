@@ -1,8 +1,11 @@
-const express = require("express");
+//! Imports
+const express = require( "express" );
 const router = express.Router();
 
+//! Services
 const productsCtrl = require("../services/productsCtrl");
 
+//! Routes
 router.get("/", productsCtrl.index);
 
 //* Show product by id   (should come before /new)

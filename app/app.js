@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-// const bodyParser = require("body-parser");
 
 //! Routes Imports
 const curlRoutes = require("../routes/curlRoutes");
 const productRoutes = require("../routes/productsRoutes");
+const twigRoutes = require("../routes/twigRoutes");
 //
 //
 //
@@ -12,7 +12,11 @@ const productRoutes = require("../routes/productsRoutes");
 //! Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
+
+//! Twig Template Engine
+//t --- Path below seems not to be working correctly in this context-----
+app.set("views", __dirname + "../templates/views/home.twig");
+app.set("view engine", "twig");
 
 //! CORS
 app.use((req, res, next) => {
@@ -45,6 +49,9 @@ app.use("/curl", curlRoutes);
 
 //* http://localhost:4000/products
 app.use("/products", productRoutes.router);
+
+//* http://localhost:4000/
+app.use("/twig", twigRoutes.router);
 
 //! Error Handling
 app.use((req, res, next) => {
