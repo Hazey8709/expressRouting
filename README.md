@@ -6,24 +6,24 @@
 **Project Details:** _Project for Full Sail Audited Class WDV442-0_ <br />
 **Date:** _Sep 30, 20023_ <br />
 
+
 # Branch:
 [main:](https://github.com/Hazey8709/expressRouting) <br />
 [DEV:](https://github.com/Hazey8709/expressRouting/tree/DEV) <br />
-[products](https://github.com/Hazey8709/expressRouting/tree/Products) <br />
-[]() <br />
+[products:](https://github.com/Hazey8709/expressRouting/tree/Products) <br />
+[twigTemplateEngine:](https://github.com/Hazey8709/expressRouting/tree/twigTemplateEngine) <br />
+
 
 # Branch Details:
 [main:](https://github.com/Hazey8709/expressRouting) <br />
 _Final working branch (Most up to date)(Everything get's pushed here!_
 
-[DEV]() <br />
+[DEV:](https://github.com/Hazey8709/expressRouting/tree/DEV) <br />
 _DEV branch is for development purpose ONLY!_
 
-[curlRoutes]() <br />
-_CurlRoutes branch is branch for the Curl Routes_
-
-[ProductRoutes]() <br />
+[Products:](https://github.com/Hazey8709/expressRouting/tree/Products) <br />
 _productRoutes branch is branch for the Product Routes_ <br /> 
+
 
 # End Points <br />  
 _(Curl & Postman end points work!)_ <br />
