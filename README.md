@@ -25,6 +25,8 @@ _DEV branch is for development purpose ONLY!_
 [Products:](https://github.com/Hazey8709/expressRouting/tree/Products) <br />
 _productRoutes branch is branch for the Product Routes_ <br /> 
 
+**(Any branch labeled test or TEST, Temp or TEMP, Is strictly a testing branch only!)**
+
 
 # End Points <br />  
 _(Curl & Postman end points work!)_ <br />
