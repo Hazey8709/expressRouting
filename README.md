@@ -1,10 +1,10 @@
 # expressRouting  Branch( main ) 
 <hr />
-
 # Details: 
 **Author:** _Hazey/ NoobieJ,_ <br />
 **Project Details:** _Project for Full Sail Audited Class WDV442-0_ <br />
 **Date:** _Sep 30, 20023_ <br />
+**Used:** _NPM, Twig (Template Engine),  Dotenv, Express.js, Nodemon, Telnet, CURL_
 
 
 # Branch:
